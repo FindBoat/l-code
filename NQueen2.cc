@@ -3,12 +3,13 @@
 using namespace std;
 class Solution {
 public:
-    int count = 0;
+    int count;
     int totalNQueens(int n) {
         if (n == 0) return 0;
         int pos[n];
+        count = 0;
         doSolve(pos, 0, n);
-        return res.size();
+        return count;
     }
     void doSolve(int *pos, int i, int n) {
         if ( i == n) {

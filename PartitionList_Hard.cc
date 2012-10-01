@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+// Don't forget to add cur = cur->next.
 
 struct ListNode {
     int val;
@@ -35,7 +36,7 @@ public:
             head = head->next;
         }
         if (cur) cur->next = h2;
-        cur2->next = NULL;
+        if (cur2) cur2->next = NULL;
         return h ? h : h2;
     }
 };
